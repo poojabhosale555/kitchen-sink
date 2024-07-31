@@ -33,6 +33,7 @@ The application uses the MongoDB database. MongoDB is a schema-less database, wh
 2. **Update `application.properties`:**
    - In `src/main/resources/application.properties`:
      ```properties
+     spring.data.mongodb.database=<database name>
      spring.data.mongodb.uri=mongodb+srv://<username>:<password>@cluster0.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
      ```
 
