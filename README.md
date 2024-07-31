@@ -36,16 +36,7 @@ The application uses the MongoDB database. MongoDB is a schema-less database, wh
      spring.data.mongodb.uri=mongodb+srv://<username>:<password>@cluster0.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
      ```
 
-## Table of Contents
-
-- [Requirements](#requirements)
-- [Setup](#setup)
-- [Endpoints](#endpoints)
-- [Project Structure](#project-structure)
-- [Running the Application](#running-the-application)
-- [License](#license)
-
-## Requirements
+## Application Requirements
 
 - Java 22 (Go to the [Java SE Development Kit 22 Downloads](https://www.oracle.com/java/technologies/javase/jdk22-archive-downloads.html) page.) 
 - Spring Boot 3.3.2 - (Go to the [Spring Initializr](https://start.spring.io/) website.)
@@ -75,28 +66,28 @@ This will start the application on http://localhost:8080.
 ## Endpoints
 
 ### Get List of Members
-- **URL:** `/members/list`
+- **URL:** `http://localhost:8080/api/v1/members/list`
 - **Method:** `GET`
 - **Response:** `200 OK` with the list of members in JSON format.
 
 ### Get Member by ID
-- **URL:** `/members/{memberId}`
+- **URL:** `http://localhost:8080/api/v1/members/{memberId}`
 - **Method:** `GET`
 - **Path Variable:**
   - `memberId` (String): ID of the member to retrieve.
 - **Response:** `200 OK` with the member details in JSON format or `404 Not Found` if the member does not exist.
 
 ### Create a New Member
-- **URL:** `/members/create`
+- **URL:** `http://localhost:8080/api/v1/members/create`
 - **Method:** `POST`
 - **Request Body:** JSON representation of the member.
 - **Response:** `200 OK` with the created member details in JSON format or `400 Bad Request` if a member with the same email already exists.
 
 #### Example Request Body:
-```json
-{
-  "id": "123",
-  "name": "John Doe",
-  "email": "john.doe@example.com"
-}
-
+      
+      {
+       "migratedId":"6",
+       "name":"Cristiano Ronaldo",
+       "email":"Cristiano.Ronaldo@mongodb.com",
+       "phoneNumber":"22222222222"
+      }
