@@ -2,6 +2,40 @@
 
 This is a Spring Boot application for managing members with RESTful endpoints to list members, get a member by ID, and create a new member.
 
+# MongoDB Database
+The application uses the MongoDB database. MongoDB is a schema-less database, which means the database can manage data without the need for a blueprint. Data in MongoDB is stored in documents with key-value pairs instead of rows and columns, which makes the data more flexible when compared to SQL databases. As a document database, MongoDB makes it easy for developers to store structured or unstructured data. It uses a JSON-like format to store documents.
+
+### Install and Configure MongoDB with Application
+
+1. **MongoDB Atlas Account:**
+   - Sign up for a free account at [MongoDB Atlas](https://www.mongodb.com/cloud/atlas/register).
+
+2. **Create a Cluster:**
+   - Follow Atlas UI instructions to create a new cluster.
+
+3. **Get Connection String:**
+   - Whitelist your IP address and create a database user.
+   - Copy the connection string provided (e.g., `mongodb+srv://<username>:<password>@cluster0.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`).
+
+### Configure Spring Boot Application
+
+1. **Add Dependencies:**
+   - In your `pom.xml`:
+     ```xml
+     <dependencies>
+         <dependency>
+             <groupId>org.springframework.boot</groupId>
+             <artifactId>spring-boot-starter-data-mongodb</artifactId>
+         </dependency>
+     </dependencies>
+     ```
+
+2. **Update `application.properties`:**
+   - In `src/main/resources/application.properties`:
+     ```properties
+     spring.data.mongodb.uri=mongodb+srv://<username>:<password>@cluster0.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+     ```
+
 ## Table of Contents
 
 - [Requirements](#requirements)
