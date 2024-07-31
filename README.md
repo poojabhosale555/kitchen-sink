@@ -13,9 +13,9 @@ This is a Spring Boot application for managing members with RESTful endpoints to
 
 ## Requirements
 
-- Java 22
-- Spring Boot 3.3.2
-- Maven 4.0.0
+- Java 22 (Go to the [Java SE Development Kit 22 Downloads](https://www.oracle.com/java/technologies/javase/jdk22-archive-downloads.html) page.) 
+- Spring Boot 3.3.2 - (Go to the [Spring Initializr](https://start.spring.io/) website.)
+- Maven 4.0.0 (Go to the [Maven Downloads](https://maven.apache.org/download.cgi) page.)
 
 ## Setup
 
